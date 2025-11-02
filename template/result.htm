@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Emotion Result</title>
+</head>
+<body>
+  <h1>Detection Result</h1>
+  <p><strong>Name:</strong> {{ firstname }} {{ surname }}</p>
+  <p><strong>Matric No:</strong> {{ matric_number }}</p>
+  <p><strong>Email:</strong> {{ email }}</p>
+
+  <h2>Predicted Emotion: {{ emotion }}</h2>
+  <p>{{ message }}</p>
+  <p><em>Confidence (model): {{ "%.2f"|format(confidence * 100) }}%</em></p>
+
+  <h3>Uploaded photo</h3>
+  <img src="{{ image_data }}" alt="Uploaded photo" style="max-width:350px; height:auto;">
+
+  <hr>
+  <a href="/">Classify another image</a>
+</body>
+</html>
